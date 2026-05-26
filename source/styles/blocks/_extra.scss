@@ -1,0 +1,23 @@
+.extra {
+}
+
+.extra__wrapper {
+}
+
+.extra__title {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: $basic-black;
+}
+
+.extra__list {
+  @include list-reset;
+}
+
+.extra__item {
+}
+
+.extra__promo {
+}

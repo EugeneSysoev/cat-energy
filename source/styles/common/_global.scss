@@ -1,5 +1,30 @@
-.body {
-  font-family: $primary-font;
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
   font-weight: 400;
   font-size: 16px;
+}
+
+.page {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $desktop-width;
+  }
 }

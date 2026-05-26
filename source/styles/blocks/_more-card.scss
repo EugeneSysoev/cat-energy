@@ -1,0 +1,31 @@
+.more-card {
+}
+
+.more-card__text {
+  @include mar-pad-reset;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+  color: $special-dark-grey-2;
+}
+
+.more-card__subtext {
+  @include mar-pad-reset;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 113%;
+  color: $special-dark-grey;
+}
+
+.more-card__button {
+  @include mar-pad-reset;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  text-align: center;
+}

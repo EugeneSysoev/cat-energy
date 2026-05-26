@@ -1,0 +1,26 @@
+.subscription {
+}
+
+.subscription__wrapper {
+}
+
+.subscription__title {
+  @include mar-pad-reset;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: $basic-black;
+}
+
+.subscription__description {
+  @include mar-pad-reset;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 133%;
+  color: $basic-black;
+}
+
+.subscription__form {
+}
