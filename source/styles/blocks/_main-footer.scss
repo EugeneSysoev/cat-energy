@@ -1,0 +1,22 @@
+.main-footer {
+  @include container-paddings;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.main-footer__logo {
+}
+
+.main-footer__social {
+}
+
+.main-footer__copyright {
+}

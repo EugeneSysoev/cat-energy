@@ -1,0 +1,41 @@
+.example {
+  @include container-paddings;
+}
+
+.example__wrapper {
+}
+
+.example__title {
+  @include mar-pad-reset;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 111%;
+  text-align: center;
+  color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 100%;
+  }
+}
+
+.example__description {
+  @include mar-pad-reset;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: $special-dark-grey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+.example__stats {
+}
+
+.example__slider {
+}

@@ -1,0 +1,24 @@
+.socials {
+}
+
+.socials__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: row;
+}
+
+.socials__item {
+}
+
+.socials__link {
+  color: #666666;
+}
+
+.socials__link--vk {
+}
+
+.socials__link--youtube {
+}
+
+.socials__link--telegram {
+}

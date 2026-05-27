@@ -1,0 +1,35 @@
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.main-nav__toggle {
+  padding: 4px 0px;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../../icons/stack.svg#toogle");
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__list {
+  @include list-reset;
+  flex-direction: row;
+  align-items: center;
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-left: auto;
+  }
+}
