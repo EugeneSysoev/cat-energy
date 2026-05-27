@@ -1,0 +1,40 @@
+.site-list {
+  @media (min-width: $tablet-width) {
+    gap: 33px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $basic-black;
+  }
+}
+
+.site-list__item {
+
+}
+
+.site-list__link {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $basic-black;
+
+  @media (min-width: $tablet-width) {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 133%;
+    text-transform: uppercase;
+    color: $basic-black;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 100%;
+  }
+}

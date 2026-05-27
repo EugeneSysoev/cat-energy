@@ -1,0 +1,44 @@
+.hero {
+  @include container-paddings;
+  position: relative;
+}
+
+.hero__wrapper {
+  background-color: $basic-green;
+}
+
+.hero__title {
+  @include mar-pad-reset;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    color: $basic-black;
+  }
+}
+
+.hero__description {
+  @include mar-pad-reset;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    color: $basic-black;
+  }
+}
+
+.hero__image-can {
+}
+
+.hero__button {
+}

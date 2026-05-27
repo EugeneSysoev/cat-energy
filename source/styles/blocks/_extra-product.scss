@@ -1,0 +1,42 @@
+.extra-product {
+}
+
+.extra-product__info {
+}
+
+.extra-product__title {
+  @include mar-pad-reset;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: $special-dark-grey-2;
+}
+
+.extra-product__meta {
+  @include mar-pad-reset;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: $special-dark-grey;
+}
+
+.extra-product__price {
+  @include mar-pad-reset;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: $special-dark-grey;
+}
+
+.extra-product__button {
+  @include mar-pad-reset;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+}
