@@ -1,23 +1,79 @@
 .more-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 130px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../../icons/stack.svg#plus");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 22px;
+    margin-top: 6px;
+
+    @media (min-width: $tablet-width) {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 52px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+  }
 }
 
 .more-card__text {
   @include mar-pad-reset;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 120%;
+  font-size: 16px;
+  line-height: 125%;
   text-transform: uppercase;
-  color: $special-dark-grey-2;
+  text-align: center;
+  color: $basic-black;
+  margin-bottom: 8px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 120%;
+    margin-bottom: 24px;
+    padding: 0px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0px 20px;
+  }
 }
 
 .more-card__subtext {
   @include mar-pad-reset;
   font-family: $second-family;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 113%;
+  font-size: 12px;
+  line-height: 133%;
+  text-align: center;
   color: $special-dark-grey;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 113%;
+    padding: 0px 30px;
+    margin-bottom: 0px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0px 8px;
+  }
 }
 
 .more-card__button {
@@ -28,4 +84,13 @@
   line-height: 125%;
   text-transform: uppercase;
   text-align: center;
+  min-height: 40px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+  }
 }

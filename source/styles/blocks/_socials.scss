@@ -1,24 +1,40 @@
 .socials {
+  @include mar-pad-reset;
 }
 
 .socials__list {
   @include list-reset;
   display: flex;
   flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $mobile-width-only) {
+    margin: 20px 0px;
+  }
 }
 
 .socials__item {
+  flex-shrink: 0;
 }
 
 .socials__link {
-  color: #666666;
+  color: $special-grey-3;
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.socials__link--vk {
-}
-
-.socials__link--youtube {
-}
-
-.socials__link--telegram {
+.socials__link svg {
+  display: block;
 }

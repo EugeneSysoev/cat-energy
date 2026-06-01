@@ -1,17 +1,46 @@
 .goods {
+  @include mar-pad-reset;
 }
 
 .goods__list {
   @include list-reset;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+  align-self: center;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 63px;
+    row-gap: 80px;
+  }
 }
 
 .goods__item {
+  border-top: 1px solid $special-grey-2;
+  padding: 20px 0px 25px 0px;
+
+  &:last-child {
+    border-bottom: 1px solid $special-grey-2;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+    padding: 10px 38px 40px 38px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
 }
 
 .goods__item--more {
-  width: 60px;
-  height: 60px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("../../icons/stack.svg#plus");
+  width: auto;
+  height: auto;
+  background: none;
 }

@@ -21,15 +21,18 @@ const sass = gulpSass(dartSass);
 const PATH_TO_SOURCE = './source/';
 const PATH_TO_DIST = './build/';
 const PATH_TO_RAW = './raw/';
+
 const PATHS_TO_STATIC = [
   `${PATH_TO_SOURCE}fonts/**/*.{woff2,woff}`,
   `${PATH_TO_SOURCE}*.ico`,
   `${PATH_TO_SOURCE}*.webmanifest`,
+  `${PATH_TO_SOURCE}*.txt`,
   `${PATH_TO_SOURCE}favicons/**/*.{png,svg}`,
   `${PATH_TO_SOURCE}vendor/**/*`,
   `${PATH_TO_SOURCE}images/**/*`,
   `!${PATH_TO_SOURCE}**/README.md`,
 ];
+
 let isDevelopment = true;
 
 export function processMarkup() {
@@ -96,14 +99,12 @@ export function processScripts() {
 
 export function optimizeRaster() {
   const RAW_DENSITY = 2;
-  const TARGET_FORMATS = [undefined, 'webp']; // undefined — initial format: jpg or png
+  const TARGET_FORMATS = [undefined, 'webp'];
 
   function createOptionsFormat() {
     const formats = [];
 
-
     for (const format of TARGET_FORMATS) {
-      // Исправлено: меняем density$ на density--
       for (let density = RAW_DENSITY; density > 0; density--) {
         formats.push({
           format,

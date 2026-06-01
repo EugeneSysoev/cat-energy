@@ -1,17 +1,35 @@
 .catalog {
-}
+  @include container-paddings;
+  margin-top: 27px;
 
-.catalog__wrapper {
+  @media (min-width: $tablet-width) {
+    margin-top: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 74px;
+  }
 }
 
 .catalog__title {
   @include mar-pad-reset;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 60px;
+  font-size: 36px;
   line-height: 100%;
   color: $basic-black;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0px;
+    font-size: 60px;
+  }
 }
 
 .catalog__goods {
+  margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 84px;
+  }
 }

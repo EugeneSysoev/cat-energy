@@ -1,19 +1,88 @@
 .promo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 60px 20px;
+
   background-color: $basic-green;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 290px;
+
+  background-image: url("../../images/section-gift/mobile-inner-image@1x.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../images/section-gift/mobile-inner-image@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 60px 80px;
+    min-height: 200px;
+    background-image: url("../../images/section-gift/tablet-inner-image@1x.png");
+    background-position: left center;
+  }
+
+  @media (min-width: $tablet-width) and (min-resolution: 2dppx) {
+    background-image: url("../../images/section-gift/tablet-inner-image@2x.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 40px;
+    min-height: 288px;
+    background-image: url("../../images/section-gift/desktop-inner-image@1x.png");
+    background-position: center;
+  }
+
+  @media (min-width: $desktop-width) and (min-resolution: 2dppx) {
+    background-image: url("../../images/section-gift/desktop-inner-image@2x.png");
+  }
 }
 
 .promo-block__gift {
   width: 80px;
   height: 83px;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url("../../icons/stack.svg#gift");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: 46px;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 0;
+    margin-bottom: 46px;
+  }
 }
 
 .promo-block__text {
+  @include mar-pad-reset;
   font-family: $second-family;
   font-weight: 400;
   font-size: 16px;
   line-height: 125%;
   color: $basic-white;
+  max-width: 160px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 280px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 160px;
+  }
 }
