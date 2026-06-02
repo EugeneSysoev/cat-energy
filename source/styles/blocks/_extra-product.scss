@@ -1,35 +1,107 @@
 .extra-product {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border-top: 1px solid $special-grey;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 38px 15px;
+  }
 }
 
 .extra-product__info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "title title"
+    "meta  price";
+  row-gap: 14px;
+  margin-bottom: 14px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    row-gap: 0;
+    grid-template-columns: minmax(150px, auto) 1fr auto;
+    grid-template-areas: "title meta price";
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+    width: auto;
+  }
 }
 
 .extra-product__title {
   @include mar-pad-reset;
+  grid-area: title;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 100%;
   text-transform: uppercase;
   color: $special-dark-grey-2;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    max-width: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 250px;
+  }
 }
 
 .extra-product__meta {
   @include mar-pad-reset;
+  grid-area: meta;
   font-family: $second-family;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 100%;
   color: $special-dark-grey;
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 125%;
+    text-align: right;
+    margin-right: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 80px;
+  }
 }
 
 .extra-product__price {
   @include mar-pad-reset;
+  grid-area: price;
   font-family: $second-family;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 125%;
+  font-size: 14px;
+  line-height: 100%;
   color: $special-dark-grey;
+  text-align: right;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 125%;
+    margin-right: 42px;
+  }
 }
 
 .extra-product__button {
@@ -39,4 +111,17 @@
   font-size: 16px;
   line-height: 125%;
   text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  min-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    width: 242px;
+    flex-shrink: 0;
+  }
 }

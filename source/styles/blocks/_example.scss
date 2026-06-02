@@ -1,8 +1,27 @@
 .example {
   @include container-paddings;
+  background-color: $basic-grey;
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-white;
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent 150px,
+        $basic-grey 150px
+      );
+  }
 }
 
 .example__wrapper {
+  margin-top: 50px;
+  padding: 25px 0 40px;
+}
+
+.example__info {
+  @media (min-width: $desktop-width) {
+    padding-right: 788px;
+  }
 }
 
 .example__title {
@@ -11,7 +30,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 111%;
-  text-align: center;
+  text-align: start;
   color: $basic-black;
 
   @media (min-width: $tablet-width) {
@@ -27,15 +46,27 @@
   font-size: 14px;
   line-height: 129%;
   color: $special-dark-grey;
+  margin-top: 40px;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 150%;
+    margin-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 146px;
   }
 }
 
-.example__stats {
-}
-
 .example__slider {
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+  }
 }

@@ -1,9 +1,36 @@
 .copyright {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 }
 
 .copyright__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   text-decoration: none;
-  color: $special-dark-grey;
+  color: $special-grey-3;
+  width: 100%;
+  transition: color 0.3s ease, opacity 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: $basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    gap: 24px;
+  }
 }
 
 .copyright__text {

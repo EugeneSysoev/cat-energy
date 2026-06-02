@@ -1,11 +1,33 @@
 .contacts {
+  position: relative;
+}
 
+.contacts--catalog {
+  background-color: $basic-grey;
 }
 
 .contacts__wrapper {
   @include container-paddings;
-  display: flex;
-  flex-direction: row;
+}
+
+.contacts__info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 26px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 40px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-color: $basic-white;
+    position: absolute;
+    top: 100px;
+    width: 565px;
+    padding: 60px 80px;
+    gap: 80px;
+  }
 }
 
 .contacts__title {
@@ -20,11 +42,17 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 130%;
+    padding-right: 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
   }
 }
 
 .contacts__address {
   @include mar-pad-reset;
+  font-style: normal;
   align-self: center;
   font-family: $second-family;
   font-weight: 400;
@@ -33,13 +61,42 @@
   color: $special-dark-grey;
 
   @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
     font-size: 16px;
     line-height: 125%;
+    justify-self: end;
+    padding-left: 140px;
+    text-align: right;
+    gap: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    text-align: left;
   }
 }
 
 .contacts__map {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+  background-color: $special-grey;
 }
 
 .contacts__map-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.contacts__map-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border: none;
 }

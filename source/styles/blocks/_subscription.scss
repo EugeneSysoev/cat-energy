@@ -1,26 +1,178 @@
 .subscription {
+  @include container-paddings;
+  padding-top: 25px;
+  padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 80px;
+  }
 }
 
 .subscription__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.subscription__header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 24px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 72px;
+  }
 }
 
 .subscription__title {
   @include mar-pad-reset;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 100%;
   color: $basic-black;
+  white-space: nowrap;
+  margin-right: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    margin-right: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 40px;
+    margin-right: 40px;
+    margin-bottom: 0;
+  }
+}
+
+.subscription__decor-line {
+  width: 108px;
+  height: 0;
+  border: none;
+  border-top: 2px solid $basic-green;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    width: 456px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    flex-grow: 1;
+    margin-left: 0;
+  }
 }
 
 .subscription__description {
   @include mar-pad-reset;
   font-family: $font-family;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 133%;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
   color: $basic-black;
+  margin-bottom: 24px;
+  padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    padding: 0 90px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    line-height: 133%;
+    width: 100%;
+    flex-grow: 1;
+
+    margin-bottom: 24px;
+  }
 }
 
-.subscription__form {
+.form-subscribe {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-shrink: 0;
+  }
+}
+
+.form-subscribe__field {
+  width: 100%;
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    flex-grow: 1;
+  }
+}
+
+.form-subscribe__input {
+  @include mar-pad-reset;
+  box-sizing: border-box;
+  width: 100%;
+  height: 56px;
+  padding: 12px 14px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: $special-dark-grey-2;
+  border: 1px solid $special-grey-4;
+  background-color: $basic-white;
+
+  &::placeholder {
+    color: $special-dark-grey;
+    opacity: 1;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 50px;
+    padding: 14px 20px;
+  }
+}
+
+.form-subscribe__button {
+  @include mar-pad-reset;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  height: 56px;
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $basic-green;
+  color: $basic-white;
+
+  @media (min-width: $tablet-width) {
+    width: 160px;
+    height: 50px;
+    flex-shrink: 0;
+  }
 }

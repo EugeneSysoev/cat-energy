@@ -2,20 +2,37 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+  }
 }
 
 .main-nav__toggle {
-  padding: 4px 0px;
+  display: block;
+  padding: 4px 0;
   width: 24px;
   height: 24px;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
-  background-image: url("../../icons/stack.svg#toogle");
-  background-color: inherit;
+  background-color: transparent;
   border: none;
   cursor: pointer;
-  margin-left: auto;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+
+  .main-nav--closed & {
+    background-image: url("../../icons/stack.svg#toogle");
+  }
+
+  .main-nav--opened & {
+    background-image: url("../../icons/close.svg");
+  }
+
+  .main-nav--nojs & {
+    display: none;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -24,12 +41,28 @@
 
 .main-nav__list {
   @include list-reset;
-  flex-direction: row;
-  align-items: center;
-  display: none;
+
+  @media (max-width: $mobile-width-only) {
+    .main-nav--closed & {
+      display: none;
+    }
+
+    .main-nav--opened &,
+    .main-nav--nojs & {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: $basic-white;
+      z-index: 1;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     display: flex;
-    margin-left: auto;
+    flex-direction: row;
+    align-items: center;
   }
 }
