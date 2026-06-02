@@ -43,7 +43,8 @@ export function processMarkup() {
 }
 
 export function lintBem() {
-  return src(`${PATH_TO_SOURCE}**/*.html`).pipe(bemlinter());
+  return src([`${PATH_TO_SOURCE}**/*.html`, `!${PATH_TO_SOURCE}**/*.tmp.html`])
+    .pipe(bemlinter());
 }
 
 export function processStyles() {

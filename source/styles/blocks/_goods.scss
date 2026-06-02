@@ -16,14 +16,13 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 63px;
-    row-gap: 80px;
+    gap: 80px 63px;
   }
 }
 
 .goods__item {
   border-top: 1px solid $special-grey-2;
-  padding: 20px 0px 25px 0px;
+  padding: 20px 0 25px;
 
   &:last-child {
     border-bottom: 1px solid $special-grey-2;
@@ -31,7 +30,7 @@
 
   @media (min-width: $tablet-width) {
     border-top: none;
-    padding: 10px 38px 40px 38px;
+    padding: 10px 38px 40px;
 
     &:last-child {
       border-bottom: none;

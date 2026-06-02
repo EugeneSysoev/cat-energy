@@ -1,6 +1,5 @@
 .contacts {
   position: relative;
-
 }
 
 .contacts--catalog {
@@ -14,7 +13,7 @@
 .contacts__info {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 26px 0px;
+  padding: 26px 0;
 
   @media (min-width: $tablet-width) {
     padding: 60px 40px;
@@ -47,7 +46,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-right: 0px;
+    padding-right: 0;
   }
 }
 
@@ -73,7 +72,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 0px;
+    padding-left: 0;
     text-align: left;
   }
 }

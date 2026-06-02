@@ -28,15 +28,11 @@
 .stats__list {
   @include list-reset;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   gap: 32px;
 
   @media (min-width: $tablet-width) {
     gap: 42px;
-  }
-
-  @media (min-width: $desktop-width) {
   }
 }
 
@@ -134,7 +130,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 100%;
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   @media (min-width: $desktop-width) {

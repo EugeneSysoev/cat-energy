@@ -6,10 +6,6 @@
     background-image: url("../../images/section-hero/mobile-hero-image@1x.png");
     background-size: contain;
     background-repeat: no-repeat;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../../images/section-hero/mobile-hero-image@2x.png");
-    }
   }
 
   @media (min-width: $tablet-width) {
@@ -33,17 +29,24 @@
       right: 0;
       width: 720px;
       height: 694px;
-
       background-image: url("../../images/section-hero/desktop-hero-image@1x.png");
       background-repeat: no-repeat;
       background-position: left top;
       background-size: cover;
       z-index: -1;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../../images/section-hero/desktop-hero-image@2x.png");
-      }
     }
+  }
+}
+
+@media (max-width: $mobile-width-only) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url("../../images/section-hero/mobile-hero-image@2x.png");
+  }
+}
+
+@media (min-width: $desktop-width) and (min-resolution: 2dppx) {
+  .hero::before {
+    background-image: url("../../images/section-hero/desktop-hero-image@2x.png");
   }
 }
 

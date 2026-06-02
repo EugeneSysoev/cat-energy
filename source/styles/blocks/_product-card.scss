@@ -1,13 +1,13 @@
 .product-card {
   @media (min-width: $tablet-width) {
-    row-gap: 36px;
-    column-gap: 152px;
+    gap: 36px 152px;
     width: 324px;
-    background-image: linear-gradient(
-      to bottom,
-      transparent 80px,
-      $basic-grey 80px
-    );
+    background-image:
+      linear-gradient(
+        to bottom,
+        transparent 80px,
+        $basic-grey 80px
+      );
   }
 
   @media (min-width: $desktop-width) {
@@ -63,13 +63,13 @@
   padding-right: 45px;
 
   @media (min-width: $tablet-width) {
-    padding: 0px 70px;
+    padding: 0 70px;
     margin-top: 22px;
     text-align: center;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0px 17px;
+    padding: 0 17px;
   }
 }
 
@@ -112,8 +112,6 @@
   align-items: end;
 
   @media (min-width: $tablet-width) {
-    padding-top: 6px;
-    padding-bottom: 6px;
     border-bottom: 1px solid $special-grey;
     padding-top: 10px;
     padding-bottom: 10px;

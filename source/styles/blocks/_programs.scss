@@ -21,6 +21,7 @@
 
 .programs__item {
   background-color: $basic-grey;
+
   @media (min-width: $desktop-width) {
     width: 570px;
   }
@@ -28,28 +29,27 @@
 
 .program-card {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto auto;
-  grid-template-areas:
-    "icon title"
-    "description description"
-    "link link";
+  grid-template:
+    "icon  title" auto
+    "description description" auto
+    "link  link" auto
+    / auto 1fr;
   align-items: start;
 
   @media (min-width: $tablet-width) {
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "title icon"
-      "description icon"
-      "link icon";
+    grid-template:
+      "title icon" auto
+      "description icon" auto
+      "link   icon" auto
+      / 1fr auto;
   }
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: auto 1fr;
-    grid-template-areas:
-      "icon title"
-      "description description"
-      "link link";
+    grid-template:
+      "icon  title" auto
+      "description description" auto
+      "link  link" auto
+      / auto 1fr;
   }
 }
 
@@ -87,7 +87,7 @@
 
 .program-card__icon--slim {
   display: block;
-    grid-area: icon;
+  grid-area: icon;
   width: 50px;
   height: 53px;
   background-image: url("../../icons/stack.svg#cat-seat");
@@ -99,7 +99,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 62px;
     width: 100px;
     height: 106px;
@@ -120,7 +120,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 48px;
     width: 134px;
     height: 100px;
@@ -148,7 +148,7 @@
   margin-left: 20px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
@@ -156,7 +156,7 @@
   margin-left: 11px;
 
   @media (min-width: $tablet-width) {
-    margin-left: 0px;
+    margin-left: 0;
   }
 }
 
@@ -188,7 +188,7 @@
   display: inline-flex;
   align-items: center;
   gap: 15px;
-  padding: 4px 0px;
+  padding: 4px 0;
   font-family: $font-family;
   font-weight: 400;
   font-size: 16px;
